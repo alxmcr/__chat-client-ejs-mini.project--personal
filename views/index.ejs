@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!--<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"> -->
+        <link rel="stylesheet" href="/assets/style.css">
+        <title>Namespaces and Rooms with Socket.io</title>
+    </head>
+    <body>
+        <!--NAMESPACES with many ROOMS-->
+        <section class="namespaces">
+            <!--SIDEBAR-->
+            <aside class="namespace-sidebar">
+                <div class="sidebar-column" id="list-namespaces">
+                    <h3 class="sidebar-title" id="namespaces-title"></h3>
+                    <a href="#" class="sidebar-link" id="namespaces-btnAdd">+</a>
+                    <div class="namespace-new" id="namespace-new">
+                        <form method="POST" class="namespace-form" id="namespace-form">
+                            <input type="text" name="namespace-name" id="namespace-name" class="namespace-name" placeholder="Enter your namespace" required><br>
+                            <input type="submit" value="Create" id="namespace-btncreate" name="messenger-btncreate">
+                        </form>
+                    </div>
+                    <ul class="sidebar-list" id="namespaces-list"></ul>
+                </div>
+                <div class="sidebar-column" id="list-rooms">
+                    <h3 class="sidebar-title" id="rooms-title"></h3>
+                    <a href="#" class="sidebar-link" id="rooms-btnAdd">+</a>
+                    <div class="room-new" id="room-new">
+                        <form method="POST" class="room-form" id="room-form">
+                            <input type="text" name="room-name" id="room-name" class="room-name" placeholder="Enter your room" required><br>
+                            <input type="submit" value="Create" id="room-btncreate" name="room-btncreate">
+                        </form>
+                    </div>
+                    <ul class="sidebar-list" id="rooms-list"></ul>
+                </div>
+            </aside>
+            <!-- ROOMS-->
+            <div class="namespace-room" id="room">
+                <h1 class="room-title" id="room-title"></h1>
+                <!--Chat-->
+                <div class="room-chat" id="room-chat"></div>
+                <!-- Error Messages -->
+                <div class="room-errors" id="room-errors"></div>
+                <!--Messenger-->
+                <div class="room-messenger" id="messenger">
+                    <form method="POST" class="messenger-form" id="messenger-form">
+                        <input type="text" name="messenger-username" id="messenger-username" class="messenger-username" placeholder="Enter your username" required><br>
+                        <textarea name="messenger-text" id="messenger-text" class="messenger-text" cols="30" rows="10"></textarea><br>
+                        <input type="submit" value="Send" id="messenger-btnsend" name="messenger-btnsend">
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!--Socket.io-->
+        <script src="http://127.0.0.1:9090/socket.io/socket.io.js"></script>
+        <!--My JS Script-->
+        <script src="/assets/client.js"></script>
+    </body>
+</html>

@@ -1,0 +1,138 @@
+#list-namespaces{
+    background-color: gray;
+}
+
+#list-rooms {
+    background-color: black;
+}
+
+.message-username{
+  background-color: purple;
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.message-text {
+  margin: 0;
+}
+
+.namespaces{
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+    height: 100vh;
+}
+
+.namespace-link{
+    display: block;
+    text-decoration: none;
+}
+
+.namespace-link:active,
+.namespace-link:link,
+.namespace-link:visited{
+    color: white;
+}
+
+.namespace-link:hover{
+    background-color: gold;
+    color: black;
+}
+
+.namespace-new, 
+.room-new {
+    background-color: #ffddaa;
+    display: none;
+    margin: 10px 0;
+    padding: 10px;
+    text-align: center;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.namespace-room{
+    background-color: #dddddd;
+    padding: 10px;
+}
+
+.namespace-sidebar{
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.room-link{
+    display: block;
+    text-decoration: none;
+}
+
+.room-link:active,
+.room-link:link,
+.room-link:visited{
+    color: white;
+}
+
+.room-link:hover{
+    background-color: gold;
+    color: black;
+}
+
+.room-message{
+  border: 1px solid red;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.room-messenger{
+    display: none;
+}
+
+.room-title{
+    margin: 10px 0;
+}
+
+.namespace-selected {
+    background-color: black;
+}
+
+.room-selected {
+    background-color: purple;
+}
+
+.sidebar-link{
+    background-color: gold;
+    border-radius: 10px;
+    display: block;
+    font-size: 1.5em;
+    margin: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.sidebar-link:active,
+.sidebar-link:link,
+.sidebar-link:visited{
+    color: black;
+}
+
+.sidebar-list{
+    list-style-position: inside;
+    list-style-type: none;
+    margin: 0;
+    padding: 0; 
+    text-align: center;
+}
+
+.sidebar-title{
+    text-align: center;
+}
